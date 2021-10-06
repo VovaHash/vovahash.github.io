@@ -9,7 +9,7 @@
 }
 a {
   text-decoration: none;
-  display: inline-block;
+  /* display: inline-block; */
 }
 ul,
 ol,
@@ -59,12 +59,37 @@ body {
   color: #1e2e36;
 }
 
-.header__top {
-  max-height: 60px;
+.header-top {
+  height: 60px;
   border-bottom: 1px solid #1e2e36;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-.header__bottom {
+.header-top__socials {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.header-top__socials a {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  padding-left: 5px;
+}
+.header-top__phone {
+  padding-left: 50px;
+}
+
+.header-top__nav {
+  margin-left: auto;
+  display: flex;
+}
+.header-top__nav li {
+  display: inline;
+}
+.header-bottom {
   max-height: 105px;
 }
 
