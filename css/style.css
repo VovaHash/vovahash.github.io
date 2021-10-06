@@ -191,7 +191,6 @@ body {
   background-color: #ffffff;
   height: 670px;
   width: 462px;
-  margin-left: 51px;
   padding: 100px 75px;
   border-left: 15px solid #44c697;
 }
@@ -290,11 +289,37 @@ body {
 }
 
 .benefits {
-  height: 462px;
-  background-color: green;
-  margin: 100px 51px;
+  max-height: 462px;
+  margin: 100px auto;
 }
-.benefits__container {
+
+.title {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 48px;
+  font-family: "Proxima Nova Bold";
+  font-weight: bold;
+
+  line-height: 125%;
+}
+
+.title > h2 {
+  display: inline;
+  position: relative;
+  z-index: 55;
+}
+.title > h2::before {
+  background-color: #44c697;
+  width: 20px;
+  position: absolute;
+  left: -5px;
+  height: 1.15em;
+  z-index: -8;
+  content: "";
+  text-align: center;
+}
+
+.benefits__slider {
   display: flex;
   height: 350px;
   justify-content: space-between;
@@ -319,10 +344,30 @@ body {
 }
 
 .categories {
-  height: 1208px;
-  background-color: red;
-  margin: 100px 51px;
+  max-height: 1208px;
+  margin: 100px auto;
 }
+.categories__columns {
+  min-height: 143px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: center;
+}
+.categories__column {
+  width: 100%;
+}
+.categories__column img {
+  cursor: pointer;
+}
+.categories__column h4 {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  line-height: normal;
+  color: #1e2e36;
+}
+
 .about {
   height: 785px;
   background-color: #ffffff;
