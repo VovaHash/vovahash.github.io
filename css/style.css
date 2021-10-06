@@ -27,6 +27,7 @@ h5,
 h6 {
   font-weight: inherit;
   font-size: inherit;
+  margin: 0;
 }
 html,
 body {
@@ -187,10 +188,105 @@ body {
   align-items: flex-start;
 }
 .slider__content {
-  background-color: blanchedalmond;
+  background-color: #ffffff;
   height: 670px;
   width: 462px;
   margin-left: 51px;
+  padding: 100px 75px;
+  border-left: 15px solid #44c697;
+}
+
+.slider__btns-block {
+  margin-bottom: 100px;
+}
+
+.slider__title {
+  font-family: "Proxima Nova Bold";
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 100%;
+  color: #1e2e36;
+  text-align: center;
+}
+.slider__subtitle {
+  font-family: "Proxima Nova Bold";
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 125%;
+  color: #1e2e36;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+.slider__desc {
+  font-family: "Proxima Nova Regular";
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 125%;
+  color: #1e2e36;
+  text-align: center;
+}
+.slider__item-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+.slider__item-btn > a {
+  background-color: #44c697;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Proxima Nova Bold";
+  text-transform: uppercase;
+  line-height: 125%;
+  border-radius: 3px;
+  width: 209px;
+  height: 51px;
+  padding: 14px 46px;
+  line-height: 50px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slider__btns-block {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.slider__count {
+  font-family: "Proxima Nova Bold";
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 125%;
+  text-align: center;
+  text-transform: uppercase;
+}
+.slider__count > span {
+  font-size: 36px;
+  line-height: 125%;
+}
+.slider__btns {
+  display: flex;
+  justify-content: center;
+}
+.slider__btns > a {
+  border: 1px #1e2e36 solid;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  position: relative;
+}
+.slider__btn-left {
+  margin-right: 4px;
+}
+.slider__btn-right {
+  margin-left: 4px;
+}
+
+.slider__btns > a:hover {
+  background-color: #1e2e36;
 }
 
 .benefits {
@@ -303,6 +399,7 @@ body {
   height: 520px;
   background-image: url("../img/Footer_Background_Image.jpg");
   background-size: cover;
+  background-position: center;
   z-index: 1;
 }
 .footer__container {
