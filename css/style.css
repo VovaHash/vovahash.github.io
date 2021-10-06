@@ -9,7 +9,7 @@
 }
 a {
   text-decoration: none;
-  /* display: inline-block; */
+  color: #1e2e36;
 }
 ul,
 ol,
@@ -34,7 +34,7 @@ body {
   line-height: 1;
   background-color: #ffffff;
   font-size: 24px;
-  color: black;
+  color: #1e2e36;
   font-weight: bold;
   font-family: "Proxima Nova Regular";
 }
@@ -54,14 +54,8 @@ body {
   line-height: 125%;
   color: #1e2e36;
 }
-.header a {
-  height: 60px;
-  color: #1e2e36;
-}
-
 .header-top {
   height: 60px;
-  border-bottom: 1px solid #1e2e36;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -79,18 +73,100 @@ body {
   padding-left: 5px;
 }
 .header-top__phone {
-  padding-left: 50px;
+  position: relative;
+  margin-left: 50px;
+}
+.header-top__phone > a {
+  padding: 0 25px;
+}
+.header-top__phone::before {
+  position: absolute;
+  left: 0;
+  font-family: "icomoon";
+  content: "\e906";
+}
+.header-top__phone::after {
+  position: absolute;
+  right: 0;
+  font-family: "icomoon";
+  content: "\e900";
 }
 
 .header-top__nav {
   margin-left: auto;
   display: flex;
 }
+
+.header-top__nav li:not(:first-child) {
+  padding-left: 15px;
+}
+.header-top__nav a:hover {
+  border-bottom: 3px #44c697 solid;
+}
 .header-top__nav li {
   display: inline;
 }
+.header__line {
+  height: 1px;
+  width: 100vw;
+  background-color: #1e2e36;
+  opacity: 0.6;
+}
 .header-bottom {
-  max-height: 105px;
+  display: flex;
+  justify-content: center;
+  height: 105px;
+  align-items: center;
+}
+.header-bottom__categories {
+  margin-right: auto;
+}
+.header-bottom__categories-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header-bottom__categories-list > li > a {
+  padding-right: 20px;
+}
+.header-bottom__categories-list > li:not(:last-child) {
+  margin-right: 20px;
+}
+.header-bottom__categories-list > li {
+  position: relative;
+}
+.header-bottom__categories-list > li > a::after {
+  position: absolute;
+  right: 0;
+  font-family: "icomoon";
+  content: "\e900";
+}
+.header-bottom__cashout {
+  margin-left: auto;
+  line-height: 50px;
+}
+.header-bottom__basket {
+  padding-left: 40px;
+  position: relative;
+}
+.header-bottom__basket::before {
+  position: absolute;
+  left: 0;
+  font-family: "icomoon";
+  content: "\e907";
+  font-size: 28px;
+}
+
+.header-bottom__call-btn {
+  background-color: #44c697;
+  border-radius: 3px;
+  width: 278px;
+  height: 51px;
+  padding: 14px 46px;
+  margin-left: 30px;
+  line-height: 50px;
+  color: #ffffff;
 }
 
 ._container {
