@@ -269,23 +269,31 @@ body {
 .slider__btns {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .slider__btns > a {
   border: 1px #1e2e36 solid;
   height: 30px;
   width: 30px;
   border-radius: 50%;
-  position: relative;
+  font-size: 18px;
 }
 .slider__btn-left {
   margin-right: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .slider__btn-right {
   margin-left: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .slider__btns > a:hover {
   background-color: #1e2e36;
+  color: #ffffff;
 }
 
 .benefits {
@@ -366,7 +374,7 @@ body {
   align-items: center;
 }
 .benefits__arrow > i {
-  font-size: 15px;
+  font-size: 18px;
 }
 .benefits__arrow:hover {
   background: #ffffff;
@@ -410,21 +418,40 @@ body {
   min-height: 143px;
   display: flex;
   align-items: flex-end;
-  justify-content: center;
+  justify-content: space-evenly;
   text-align: center;
+  padding: 10px auto;
 }
 .categories__column {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  /* width: 100%; */
 }
 .categories__column img {
   cursor: pointer;
 }
-.categories__column h4 {
+.categories__column > h4 {
+  display: inline;
+  font-family: "Proxima Nova Bold";
+  font-weight: bold;
+  font-size: 24px;
+
+  text-align: center;
+  text-transform: uppercase;
+
   font-size: 30px;
   font-weight: 700;
   letter-spacing: 1.5px;
+  border-bottom: transparent 2px solid;
+  line-height: 2rem;
   line-height: normal;
   color: #1e2e36;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.categories__column > h4:hover {
+  border-bottom: #44c697 2px solid;
 }
 
 .shop-cards__boxes-body {
@@ -445,6 +472,23 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.shop-cards__image {
+  position: relative;
+}
+.shop-cards__overlay-text {
+  height: 33px;
+  width: 143px;
+  background-color: #1e2e36;
+  position: absolute;
+  top: 10px;
+}
+.shop-cards__overlay-discount {
+  height: 33px;
+  width: 84px;
+  background-color: #ff1b1b;
+  position: absolute;
+  top: 50px;
 }
 
 .shop-cards__info > h4 {
