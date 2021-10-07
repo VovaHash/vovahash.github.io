@@ -109,7 +109,7 @@ body {
 }
 .header__line {
   height: 1px;
-  width: 100vw;
+  width: 100%;
   background-color: #1e2e36;
   opacity: 0.6;
 }
@@ -368,8 +368,38 @@ body {
   color: #1e2e36;
 }
 
+.shop-cards__boxes-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 15px;
+}
+
+.shop-cards__box {
+  margin: 15px;
+}
+.shop-cards__info {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.shop-cards__info > h4 {
+  font-family: "Proxima Nova Bold";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 125%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #1e2e36;
+}
+.shop-cards__price {
+}
 .about {
-  height: 785px;
+  /* height: 785px; */
   background-color: #ffffff;
   margin: 100px 0;
 }
