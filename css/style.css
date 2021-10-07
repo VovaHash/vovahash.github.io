@@ -427,7 +427,7 @@ body {
   background-position: left;
   background-repeat: no-repeat;
 }
-.contact__form {
+/* .contact__form {
   padding: 50px 50px 50px 45px;
   display: flex;
   flex-direction: column;
@@ -439,7 +439,103 @@ body {
   border-left: 15px solid #44c697;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
+} */
+
+.contact__form {
+  padding: 50px 50px 50px 45px;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch; */
+  width: 528px;
+  height: 457px;
+  background-color: #ffffff;
+
+  border-left: 15px solid #44c697;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
+
+.form_body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.form__content > h5 {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 125%;
+  color: #1e2e36;
+}
+.form__content > h5 > span {
+  font-family: "Proxima Nova Bold";
+  font-weight: bold;
+}
+.form__title {
+  font-family: "Proxima Nova Bold";
+  font-weight: bold;
+  font-size: 36px;
+
+  color: #1e2e36;
+  margin-bottom: 30px;
+}
+
+.inputfield {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.form__inputfield .input {
+  width: 100%;
+  outline: none;
+  border: 1px solid #1e2e36;
+  font-size: 18px;
+  padding: 15px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  margin-bottom: 15px;
+}
+
+.form__btn {
+  margin-bottom: 30px;
+}
+.form__btn .btn {
+  width: 100%;
+  height: 51px;
+  padding: 14px auto;
+  font-size: 18px;
+  text-transform: uppercase;
+  background: #44c697;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 3px;
+  font-family: "Proxima Nova Bold";
+  font-weight: bold;
+}
+
+.form__inputfield .btn:hover {
+  background: #ffd658;
+}
+
+.form__inputfield:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 420px) {
+  .form__inputfield {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .form__inputfield label {
+    margin-bottom: 5px;
+  }
+  .form__inputfield.terms {
+    flex-direction: row;
+  }
+}
+
 .footer {
   height: 520px;
   background-image: url("../img/Footer_Background_Image.jpg");
