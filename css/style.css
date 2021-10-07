@@ -345,7 +345,7 @@ body {
 
 .categories {
   max-height: 1208px;
-  margin: 100px auto;
+  margin: 100px auto 35px auto;
 }
 .categories__columns {
   min-height: 143px;
@@ -373,11 +373,13 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
 }
 
 .shop-cards__box {
-  margin: 15px;
+  margin: 50px 15px 0 15px;
 }
 .shop-cards__info {
   padding: 15px;
@@ -396,8 +398,30 @@ body {
   text-transform: uppercase;
   color: #1e2e36;
 }
-.shop-cards__price {
+
+.shop-cards__btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
 }
+.shop-cards__btn > a {
+  background-color: #44c697;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Proxima Nova Bold";
+  text-transform: uppercase;
+  line-height: 125%;
+  border-radius: 3px;
+  width: 190px;
+  height: 51px;
+  padding: 14px 46px;
+  line-height: 50px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .about {
   /* height: 785px; */
   background-color: #ffffff;
@@ -584,27 +608,58 @@ body {
   margin-bottom: 50px;
 }
 .footer__content {
+  padding-bottom: 25px;
   display: flex;
-  margin-bottom: 50px;
+  justify-content: flex-start;
+  margin-bottom: 70px;
 }
-.footer_column {
+.footer__column {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: flex-start;
-  width: 200px;
+
+  min-width: 170px;
 }
-.footer_column > a {
+
+.footer__column > a {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 18px;
+
+  font-family: "Proxima Nova Bold";
+  text-transform: uppercase;
+}
+.footer__column > a:not(:last-child) {
+  margin-bottom: 15px;
+}
+.footer__column > a > span {
+  color: #44c697;
+}
+.footer__column-contacts > a,
+.footer__column-contacts > p {
+  margin-left: 40%;
+  font-family: "Proxima Nova Regular";
+  font-weight: 400;
+  font-size: 18px;
   color: #ffffff;
 }
 .footer__copyright {
-  bottom: 0;
-  margin-top: 150px;
+  margin-bottom: -10px;
 }
-.footer__copyright > p {
-  display: inline;
+.footer__copyright-body {
   font-size: 14px;
+  font-family: "Proxima Nova Regular";
+  font-weight: 400;
+  line-height: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
 }
-.footer__copyright > p:last-child {
-  float: right;
+
+.footer__copyright-body > :first-child {
+  margin-right: auto;
+}
+.footer__copyright-body > img {
+  margin-right: 3px;
 }
