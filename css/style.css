@@ -42,6 +42,16 @@ body {
 
 /* CSS Code for the project */
 
+._outside-resize-box {
+  max-width: 1900px;
+  margin: 0 auto;
+}
+
+._outside-images-box {
+  max-width: 2000px;
+  margin: 0 auto;
+}
+
 .wrapper {
   position: relative;
   min-height: 100%;
