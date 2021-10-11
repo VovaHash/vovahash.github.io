@@ -712,6 +712,7 @@ body {
 
 .shop-cards__box {
   margin: 50px 15px 0 15px;
+  cursor: pointer;
 }
 .shop-cards__info {
   padding: 15px;
@@ -726,16 +727,25 @@ body {
   width: 100%;
 }
 
-.shop-cards__overlay-text {
+.shop-cards__overlay {
   height: 33px;
-  width: 143px;
   background-color: #1e2e36;
+  color: #ffffff;
+  font-family: "Proxima Nova Bold";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 33px;
+
+  text-transform: uppercase;
   position: absolute;
   top: 10px;
+  padding: 0 15px;
 }
-.shop-cards__overlay-discount {
+
+.overlay-discount {
   height: 33px;
-  width: 84px;
+  min-width: 84px;
   background-color: #ff1b1b;
   position: absolute;
   top: 50px;
@@ -751,7 +761,15 @@ body {
   text-transform: uppercase;
   color: #1e2e36;
 }
-
+.shop-cards__discount-price {
+  color: #ff1b1b;
+}
+.shop-cards__old-price {
+  font-size: 18px;
+  color: #bcbdbb;
+  text-decoration-line: line-through;
+  padding-left: 5px;
+}
 .shop-cards__btn {
   display: flex;
   justify-content: center;
@@ -773,6 +791,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.shop-cards__box:hover {
+  /* cursor: pointer; */
+  background-color: #44c697;
+  color: #ffffff;
+
+  transform: translateY(-20px);
 }
 
 .about {
