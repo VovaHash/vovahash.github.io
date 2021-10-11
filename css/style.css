@@ -42,6 +42,8 @@ body {
 
 /* CSS Code for the project */
 
+/* General Containers */
+
 ._outside-resize-box {
   max-width: 1900px;
   margin: 0 auto;
@@ -62,6 +64,9 @@ body {
   position: relative;
   min-height: 100%;
 }
+
+/* Header */
+
 .header {
   height: 165px;
   background-color: #ffffff;
@@ -89,6 +94,10 @@ body {
   vertical-align: middle;
   padding-left: 5px;
 }
+.header-top__socials > a:hover {
+  filter: invert(65%) sepia(16%) saturate(1250%) hue-rotate(107deg)
+    brightness(98%) contrast(99%);
+}
 .header-top__phone {
   position: relative;
   margin-left: 50px;
@@ -96,13 +105,17 @@ body {
 .header-top__phone > a {
   padding: 0 25px;
 }
-.header-top__phone::before {
+.header-top__phone > a:hover {
+  filter: invert(65%) sepia(16%) saturate(1250%) hue-rotate(107deg)
+    brightness(98%) contrast(99%);
+}
+.header-top__phone > a::before {
   position: absolute;
   left: 0;
   font-family: "icomoon";
   content: "\e906";
 }
-.header-top__phone::after {
+.header-top__phone > a::after {
   position: absolute;
   right: 0;
   font-family: "icomoon";
@@ -143,6 +156,7 @@ body {
 .header-bottom__logo {
   text-align: center;
   margin: 0 auto;
+  cursor: pointer;
 }
 .header-bottom__logo > h3 {
   font-family: "Proxima Nova Bold";
@@ -180,8 +194,11 @@ body {
   font-family: "icomoon";
   content: "\e900";
 }
+.header-bottom__categories-list > li > a:hover {
+  filter: invert(65%) sepia(16%) saturate(1250%) hue-rotate(107deg)
+    brightness(98%) contrast(99%);
+}
 .header-bottom__cashout {
-  /* margin-left: auto; */
   line-height: 50px;
 }
 .header-bottom__basket {
@@ -195,8 +212,20 @@ body {
   content: "\e907";
   font-size: 28px;
 }
+.header-bottom__basket:hover {
+  color: #44c697;
+}
 .header-bottom__categories-hidden {
   display: none;
+  padding-right: 20px;
+  position: relative;
+}
+.header-bottom__categories-hidden::after {
+  position: absolute;
+  right: 0;
+  font-family: "icomoon";
+  line-height: 20px;
+  content: "\e900";
 }
 .header-bottom__call-btn {
   background-color: #44c697;
@@ -241,7 +270,7 @@ body {
   }
   .header-bottom__categories-hidden {
     display: inline;
-    margin-right: 190px;
+    margin-right: 170px;
   }
 }
 
@@ -265,7 +294,7 @@ body {
     display: inline;
   }
   .header-bottom__categories-hidden {
-    margin-right: 20px;
+    margin-right: 0px;
   }
 }
 
@@ -306,7 +335,11 @@ body {
     font-weight: bold;
     display: inline;
   }
+  .header-bottom__logo > img {
+    height: 60px;
+  }
 }
+
 @media (max-width: 520px) {
   .header-bottom__logo {
     display: none;
@@ -314,7 +347,19 @@ body {
   .header-bottom {
     justify-content: space-between;
   }
+  .header-bottom__basket {
+    margin-left: 0;
+  }
 }
+
+@media (max-width: 350px) {
+  .header-bottom__basket-text {
+    display: none;
+  }
+}
+
+/*   Slider    */
+
 .slider {
   height: 785px;
   background-image: url("../img/Slider_Background_Image.jpg");
@@ -483,6 +528,8 @@ body {
   }
 }
 
+/* Benefits  */
+
 .benefits {
   max-height: 462px;
   margin: 100px auto;
@@ -552,6 +599,7 @@ body {
   display: block;
 }
 .benefits__arrow {
+  cursor: pointer;
   position: absolute;
   height: 30px;
   width: 30px;
@@ -641,6 +689,23 @@ body {
   }
 }
 
+@media (max-width: 396px) {
+  .benefits__item > p {
+    font-size: 12px;
+  }
+  .benefits__item > .benefits__item-title > h3 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 367px) {
+  .categories__container {
+    padding-top: 60px;
+  }
+}
+
+/* Categories */
+
 .categories {
   max-height: 1208px;
   margin: 100px auto 35px auto;
@@ -666,8 +731,6 @@ body {
   display: flex;
   flex-direction: column;
   border-bottom: transparent 2px solid;
-
-  /* width: 100%; */
 }
 .categories__column:hover {
   cursor: pointer;
@@ -759,7 +822,6 @@ body {
   line-height: 125%;
   text-align: center;
   text-transform: uppercase;
-  color: #1e2e36;
 }
 .shop-cards__discount-price {
   color: #ff1b1b;
@@ -794,15 +856,41 @@ body {
 }
 
 .shop-cards__box:hover {
-  /* cursor: pointer; */
   background-color: #44c697;
   color: #ffffff;
-
   transform: translateY(-20px);
 }
 
+@media (max-width: 500px) {
+  .shop-cards__info > h4 {
+    font-size: 18px;
+  }
+  .shop-cards__price {
+    font-size: 18px;
+  }
+  .shop-cards__old-price {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 395px) {
+  .shop-cards__info {
+    padding: 10px 5px;
+  }
+  .shop-cards__info > h4 {
+    font-size: 16px;
+  }
+  .shop-cards__price {
+    font-size: 14px;
+  }
+  .shop-cards__old-price {
+    font-size: 10px;
+  }
+}
+
+/* About Us */
+
 .about {
-  /* height: 785px;  */
   background-color: #ffffff;
   margin: 100px 0;
 }
@@ -824,11 +912,12 @@ body {
   background-color: #ffffff;
   width: 791px;
   min-height: 475px;
-  font-family: Proxima Nova;
+  font-family: "Proxima Nova Regular";
   font-size: 18px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 23px;
+  color: #1e2e36;
   letter-spacing: 0em;
   text-align: left;
   display: flex;
@@ -842,7 +931,10 @@ body {
   padding-bottom: 15px;
 }
 .about__content span {
-  color: green;
+  font-family: "Proxima Nova Bold";
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #44c697;
 }
 
 @media (max-width: 800px) {
@@ -854,8 +946,13 @@ body {
     margin-bottom: 0px;
   }
 }
-@media (max-width: 740px) {
+@media (max-width: 425px) {
+  .about__content > p {
+    font-size: 14px;
+  }
 }
+
+/* Contact Form */
 
 .contact {
   max-height: 785px;
@@ -876,26 +973,9 @@ body {
   background-position: left;
   background-repeat: no-repeat;
 }
-/* .contact__form {
-  padding: 50px 50px 50px 45px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: stretch;
-  background-color: #ffffff;
-  width: 528px;
-  height: 457px;
-  border-left: 15px solid #44c697;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-} */
 
 .contact__form {
   padding: 50px 50px 50px 45px;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: stretch; */
   width: 528px;
   min-height: 457px;
   background-color: #ffffff;
@@ -1003,6 +1083,8 @@ body {
   }
 }
 
+/* Footer */
+
 .footer {
   height: 520px;
   background-image: url("../img/Footer_Background_Image.jpg");
@@ -1037,7 +1119,6 @@ body {
 
 .footer__logo {
   margin-bottom: 50px;
-  /* text-align: center; */
 }
 .footer__logo > h3 {
   display: inline;
@@ -1062,7 +1143,6 @@ body {
   padding-bottom: 25px;
   display: flex;
   justify-content: flex-start;
-  /* margin-bottom: auto; */
 }
 .footer__column {
   display: flex;
@@ -1094,7 +1174,6 @@ body {
 
 .footer__column-contacts > a,
 .footer__column-contacts > p {
-  /* margin-left: 40%; */
   font-family: "Proxima Nova Regular";
   font-weight: 400;
   font-size: 18px;
@@ -1118,6 +1197,14 @@ body {
   color: #ffffff;
   padding-right: 30px;
   padding-top: 20px;
+}
+.footer__social-icons > a:hover {
+  filter: invert(65%) sepia(16%) saturate(1250%) hue-rotate(107deg)
+    brightness(200%) contrast(99%);
+}
+
+.footer__column > a:hover {
+  color: #44c697;
 }
 
 .footer__copyright {
@@ -1203,5 +1290,14 @@ body {
 @media (max-width: 460px) {
   .footer__column-contacts {
     margin-top: 20px;
+  }
+}
+
+@media (max-width: 390px) {
+  .footer__copyright-body > span {
+    font-size: 12px;
+  }
+  .footer__container {
+    padding: 50px 25px 10px 25px;
   }
 }

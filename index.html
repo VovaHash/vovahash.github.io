@@ -16,7 +16,7 @@
 
 <body>
   <div class="wrapper">
-    <header class="header">
+    <header class="header" id="header">
       <div class="header-top _container ">
         <div class="header-top__socials">
           <p class="header-top__socials-text">Ми в соціальних мережах:</p>
@@ -30,10 +30,10 @@
         <nav class="header-top__nav">
           <ul>
             <li><a class="header-top__nav-links" href="#">Головна</a></li>
-            <li><a class="header-top__nav-links" href="#">АкцІї</a></li>
-            <li><a class="header-top__nav-links" href="#">Доставка та оплата</a></li>
-            <li><a class="header-top__nav-links" href="#">про нас</a></li>
-            <li><a class="header-top__nav-links" href="#">контакти</a></li>
+            <li><a class="header-top__nav-links" href="#shop-cards">АкцІї</a></li>
+            <li><a class="header-top__nav-links" href="#shop-cards">Доставка та оплата</a></li>
+            <li><a class="header-top__nav-links" href="#about">про нас</a></li>
+            <li><a class="header-top__nav-links" href="#contact">контакти</a></li>
           </ul>
         </nav>
         <a class="header-top__hamburger" href="#">☰</a>
@@ -49,19 +49,19 @@
             <li><a href="#">шафи</a></li>
             <li><a href="#">Кухня</a></li>
           </ul>
-          <a class="header-bottom__categories-hidden" href="#">Choose a category</a>
+          <a class="header-bottom__categories-hidden" href="#">Виберіть категорію</a>
         </div>
         <div class="header-bottom__logo">
           <img src="./img/Logo Image.png" alt="Logo" />
           <h3><span>F</span>urniture.test</h3>
         </div>
         <div class="header-bottom__cashout">
-          <a href="#" class="header-bottom__basket"><span class="header-bottom__basket-text">Кошик</span></a>
-          <a href="#" class="header-bottom__call-btn">Замовити дзвінок</a>
+          <a href="#categories" class="header-bottom__basket"><span class="header-bottom__basket-text">Кошик</span></a>
+          <a href="#contact" class="header-bottom__call-btn">Замовити дзвінок</a>
         </div>
       </div>
     </header>
-    <section class="slider _outside-images-box ">
+    <section class="slider _outside-images-box" id="slider">
       <div class="slider__container _container ">
         <div class="slider__content">
           <div class="slider__item">
@@ -86,7 +86,7 @@
         </div>
       </div>
     </section>
-    <section class="benefits">
+    <section class="benefits" id="benefits">
       <div class="benefits__container _container">
         <div class="title">
           <h2>Наші переваги</h2>
@@ -118,7 +118,7 @@
         </div>
       </div>
     </section>
-    <section class="categories">
+    <section class="categories" id="categories">
       <div class="categories__container _container">
         <div class="title">
           <h2>Категорії товарів</h2>
@@ -151,7 +151,7 @@
         </div>
       </div>
     </section>
-    <section class="shop-cards _outside-resize-box">
+    <section class="shop-cards _outside-resize-box" id="shop-cards">
       <div class="shop-cards__boxes-body">
         <div class="shop-cards__box">
           <div class="shop-cards__image">
@@ -160,7 +160,9 @@
           </div>
           <div class="shop-cards__info">
             <h4>Ліжко Рамона</h4>
-            <h4 class="shop-cards__price">8 999 грн</h4>
+            <div class="shop-cards__price">
+              <span>8 999 грн</span>
+            </div>
           </div>
         </div>
         <div class="shop-cards__box">
@@ -172,8 +174,8 @@
           <div class="shop-cards__info">
             <h4>Ліжко Честер</h4>
             <div class="shop-cards__price">
-              <span class="shop-cards__discount-price">8 999 грн</span>
-              <span class="shop-cards__old-price">8 999 грн</span>
+              <span class="shop-cards__price shop-cards__discount-price">8 999 грн</span>
+              <span class="shop-cards__price shop-cards__old-price">8 999 грн</span>
             </div>
           </div>
         </div>
@@ -220,17 +222,17 @@
           <div class="shop-cards__info">
             <h4>Ліжко Атлант</h4>
             <div class="shop-cards__price" id="dds">
-              <span class="shop-cards__discount-price">8 999 грн</span>
-              <span class="shop-cards__old-price">8 999 грн</span>
+              <span class="shop-cards__price shop-cards__discount-price">8 999 грн</span>
+              <span class="shop-cards__price shop-cards__old-price">8 999 грн</span>
             </div>
           </div>
         </div>
       </div>
       <div class="shop-cards__btn">
-        <a href="#">В каталог</a>
+        <a href="#categories">В каталог</a>
       </div>
     </section>
-    <section class="about ">
+    <section class="about" id="about">
   </div>
   <div class="about__body">
     <div class="title">
@@ -256,7 +258,7 @@
       </div>
     </div>
     </section>
-    <section class="contact">
+    <section class="contact" id="contact">
       <div class="title">
         <h2>Залишились питання?</h2>
       </div>
@@ -281,7 +283,7 @@
         </div>
       </div>
     </section>
-    <footer class="footer _outside-images-box">
+    <footer class="footer _outside-images-box" id="footer">
       <div class="footer__container ">
         <div class="footer__go-back-btn">
           <a href="#"><i class="icon-chevron-up1"></i></a>
@@ -297,8 +299,8 @@
               href="#"><span>—</span> комоди</a>
           </div>
           <div class="footer__column">
-            <a href="#"><span>—</span> АкцІї</a><a href="#"><span>—</span> Доставка та оплата</a><a
-              href="#"><span>—</span> про нас</a><a href="#"><span>—</span> контакти</a>
+            <a href="#shop-cards"><span>—</span> АкцІї</a><a href="#shop-cards"><span>—</span> Доставка та оплата</a><a
+              href="#about"><span>—</span> про нас</a><a href="#contact"><span>—</span> контакти</a>
           </div>
           <div class="footer__column footer__column-contacts">
             <a href="#"><i class="icon-map-pin"></i> TEST</a>
